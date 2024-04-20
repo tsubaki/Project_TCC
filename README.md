@@ -1,4 +1,4 @@
-# Project_TCC v.1.0.1
+# Project_TCC v.1.0.2
 TCC stands for **Tiny Character Controller**. TCC provides a comprehensive solution for creating your own game.
 
 This repository contains all packages and examples for TCC projects.
@@ -15,6 +15,7 @@ Therefore, we are unable to monitor bug reports, accept feature requests, or rev
 However, we recognize that some users may wish to continue utilizing and enhancing Project_TCC. In that case, we recommend that you fork the repository. This will allow you to make changes and enhancements as you see fit.
 
 ## Release Information
+* 2024/02/21 : Project_TCC v.1.0.2 : Bug Fixed version / Merged [PR#1](https://github.com/unity3d-jp/Project_TCC/pull/1)
 * 2024/02/19 : Project_TCC v.1.0.1 : Bug Fixed version.
 * 2024/02/09 : Project_TCC v.1.0.0 : First Release.
 
@@ -158,10 +159,22 @@ Project_TCCに含まれる主要なコンポーネント群について、その
 ---
 これらのコンポーネント群を組み合わせることで、複雑なキャラクターの挙動や、様々なゲームシステムを柔軟に実装することが可能になります。TCCは、これらの基本コンポーネントをベースとして、開発者が独自の挙動や機能を追加しやすい構造になっている点も大きな特徴です。
 
----
+
+
 ## Project_TCCに含まれるシステムを、ご自身のUnityプロジェクトにインストールしたい場合
 
-[Project_TCCシステムインストールガイド](./Documentations/SystemInstallGuide.md) に従って、インストールすることができます。
+[Project_TCCシステムインストールガイド](./Documentations/SystemInstallGuide.md) に従って、インストールすることができます。　
+
+
+
+## 独自のコントロールを作成したい場合
+
+[独自のコントロールを作成するには？](./Documentations/Create_your_own_ctrl.md) をご確認ください。
+
+
+## チュートリアル
+- [My First TCC チュートリアル](./Documentations/My_First_TCC.md) 
+- [SceneLoader チュートリアル](./Documentations/SceneLoader_Tutorial.md) 
 
 
 ---
