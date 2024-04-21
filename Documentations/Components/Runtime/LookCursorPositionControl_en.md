@@ -1,10 +1,10 @@
-﻿# CursorPositionControl
+﻿# LookCursorPositionControl
 
 #### **Namespace**: Unity.TinyCharacterController.Control
 ---
 
 ## Summary:
-`CursorPositionControl` is a component that updates the character's orientation based on the cursor position. If the component has high priority, the character will look in the direction of the cursor. The coordinates at which the character gazes are calculated based on `LookTargetPoint`. To use a side view instead of a top-down view, the `_planeAxis` can be changed.
+`LookCursorPositionControl` is a component that updates the character's orientation based on the cursor position. If the component has high priority, the character will look in the direction of the cursor. The coordinates at which the character gazes are calculated based on `LookTargetPoint`. To use a side view instead of a top-down view, the `_planeAxis` can be changed.
 
 ## Features and Operation:
 - **Cursor Behavior Settings**: The `_maxDistance` setting is used to limit the range of camera movement, for example, if you want the camera to follow the cursor position.

@@ -13,12 +13,13 @@ namespace Unity.TinyCharacterController.Control
     /// The coordinates at which the character gazes are calculated based on <see cref="LookTargetPoint"/>.
     /// If you want to use side view instead of top-down, change <see cref="_planeAxis"/>.
     /// </summary>
-    [AddComponentMenu(MenuList.MenuControl + nameof(CursorPositionControl))]
+    [AddComponentMenu(MenuList.MenuControl + nameof(LookCursorPositionControl))]
     [DisallowMultipleComponent]
     [RequireComponent(typeof(CharacterSettings))]
+    [RenamedFrom("Unity.TinyCharacterController.Control.CursorPositionControl")]
     [RenamedFrom("TinyCharacterController.CursorPositionControl")]
     [Unity.VisualScripting.RenamedFrom("TinyCharacterController.Control.CursorPositionControl")]
-    public class CursorPositionControl : 
+    public class LookCursorPositionControl : 
         MonoBehaviour, 
         ITurn,
         IUpdateComponent
@@ -138,8 +139,8 @@ namespace Unity.TinyCharacterController.Control
                 return;
             
             // Get cursor position
-            var contactPosition = ray.GetPoint(distance) + _originOffset;
-            var position = _transform.Position;
+            var contactPosition = ray.GetPoint(distance) - _originOffset * 0.5f;
+            var position = _transform.Position + _originOffset * 0.5f;
             CursorPosition = contactPosition ;
             LimitedPosition = (Vector3.Distance(position, contactPosition) > _maxDistance) ?
                 Vector3.MoveTowards(position, contactPosition, _maxDistance) : contactPosition;
@@ -155,10 +156,10 @@ namespace Unity.TinyCharacterController.Control
         
         private void OnDrawGizmosSelected()
         {
-            var position = transform.position;
+            var position = transform.position + Vector3.up * _planeOffset ;
             var size = new Vector3(1, 0, 1);
 
-            GizmoDrawUtility.DrawCube(position, size, Color.green, 0.2f);
+            GizmoDrawUtility.DrawCube(position , size, Color.green, 0.2f);
 
             if (Application.isPlaying == false)
                 return;

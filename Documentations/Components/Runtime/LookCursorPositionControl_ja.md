@@ -1,10 +1,10 @@
-﻿# CursorPositionControl
+﻿# LookCursorPositionControl
 
 #### **Namespace**: Unity.TinyCharacterController.Control
 ---
 
 ## 概要:
-`CursorPositionControl` は、カーソルの位置に基づいてキャラクターの向きを更新するコンポーネントです。このコンポーネントに高い優先度が設定されている場合、キャラクターはカーソルの方向を向きます。キャラクターが見つめる座標は `LookTargetPoint` に基づいて計算されます。トップビューではなくサイドビューを使用したい場合は、`_planeAxis` を変更します。
+`LookCursorPositionControl` は、カーソルの位置に基づいてキャラクターの向きを更新するコンポーネントです。このコンポーネントに高い優先度が設定されている場合、キャラクターはカーソルの方向を向きます。キャラクターが見つめる座標は `LookTargetPoint` に基づいて計算されます。トップビューではなくサイドビューを使用したい場合は、`_planeAxis` を変更します。
 
 ## 機能と操作:
 - **カーソルの挙動設定**: カメラがカーソルの位置に追従する場合など、カーソルの移動範囲を制限するために使用される `_maxDistance` を設定できます。
